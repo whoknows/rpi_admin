@@ -180,7 +180,7 @@ $users = Users::connected();
 				<div class="span4">
 					<div class="widget wred">
 						<div class="widget-head">
-							<div class="pull-left">System Health</div>
+							<div class="pull-left">Disks Informations</div>
 							<div class="widget-icons pull-right">
 								<a href="#" class="wminimize"><i class="icon-chevron-up"></i></a>
 								<a href="#" class="wclose"><i class="icon-remove"></i></a>
@@ -190,6 +190,7 @@ $users = Users::connected();
 
 						<div class="widget-content">
 							<ul class="file-upload">
+								<?php
 								for ($i=0; $i<sizeof($hdd); $i++) {
 									echo '<li>
 											<strong><i class="icon-folder-open"></i> ', $hdd[$i]['name'] , '</strong>
@@ -199,6 +200,7 @@ $users = Users::connected();
 											<div class="file-meta">Free: <span class="text-success">', $hdd[$i]['free'], 'b</span> &middot; used: <span class="text-warning">', $hdd[$i]['used'], 'b</span> &middot; total: ', $hdd[$i]['total'], 'b &middot; format: ', $hdd[$i]['format'], '</div>
 										</li>';
 								}
+								?>
 							</ul>
 						</div>
 						<div class="widget-foot">
@@ -259,85 +261,6 @@ $users = Users::connected();
 								</li>
 							</ul>
 							<div class="clearfix"></div>
-						</div>
-						<div class="widget-foot"></div>
-					</div>
-				</div>
-
-			<div class="row-fluid">
-				<!--<div class="span6">
-					<div class="widget wblue">
-						<div class="widget-head">
-							<div class="pull-left">Curve Chart</div>
-							<div class="widget-icons pull-right">
-								<a href="#" class="wminimize"><i class="icon-chevron-up"></i></a>
-								<a href="#" class="wclose"><i class="icon-remove"></i></a>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-						<div class="widget-content">
-							<div class="padd">
-								<div id="curve-chart"></div>
-								<hr />
-								<div id="hoverdata">Mouse hovers at
-									(<span id="x">0</span>, <span id="y">0</span>). <span id="clickdata"></span></div>
-							</div>
-						</div>
-						<div class="widget-foot"></div>
-					</div>
-				</div>-->
-				<div class="span6">
-					<div class="widget wgreen">
-						<div class="widget-head">
-							<div class="pull-left">Quick Post</div>
-							<div class="widget-icons pull-right">
-								<a href="#" class="wminimize"><i class="icon-chevron-up"></i></a>
-								<a href="#" class="wclose"><i class="icon-remove"></i></a>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-						<div class="widget-content">
-							<div class="padd">
-								<div class="form quick-post">
-									<form class="form-horizontal">
-										<div class="control-group">
-											<label class="control-label" for="title">Title</label>
-											<div class="controls">
-												<input type="text" class="input-large" id="title">
-											</div>
-										</div>
-										<div class="control-group">
-											<label class="control-label" for="content">Content</label>
-											<div class="controls">
-												<textarea class="input-large" id="content"></textarea>
-											</div>
-										</div>
-										<div class="control-group">
-											<label class="control-label">Category</label>
-											<div class="controls">
-												<select>
-													<option value="">- Choose Cateogry -</option>
-													<option value="1">General</option>
-													<option value="2">News</option>
-													<option value="3">Media</option>
-													<option value="4">Funny</option>
-												</select>
-											</div>
-										</div>
-										<div class="control-group">
-											<label class="control-label" for="tags">Tags</label>
-											<div class="controls">
-												<input type="text" class="input-large" id="tags">
-											</div>
-										</div>
-										<div class="form-actions">
-											<button type="submit" class="btn btn-info">Publish</button>
-											<button type="submit" class="btn">Save Draft</button>
-											<button type="reset" class="btn">Reset</button>
-										</div>
-									</form>
-								</div>
-							</div>
 						</div>
 						<div class="widget-foot"></div>
 					</div>
