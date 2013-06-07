@@ -1,8 +1,10 @@
 <?php
 
-namespace lib;
+//namespace lib;
 
 class Network {
+
+    public function __construct(){}
 
 	public static function connections() {
 

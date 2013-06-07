@@ -1,8 +1,10 @@
 <?php
 
-namespace lib;
+//namespace lib;
 
 class Cpu {
+
+    public function __construct(){}
 
 	/**
 	 * The number of line which will be shown in the popover

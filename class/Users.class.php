@@ -1,8 +1,10 @@
 <?php
 
-namespace lib;
+//namespace lib;
 
 class Users {
+
+    public function __construct(){}
 
 	public static function connected() {
 

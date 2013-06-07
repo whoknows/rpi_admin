@@ -1,8 +1,10 @@
 <?php
 
-namespace lib;
+//namespace lib;
 
 class Storage {
+
+    public function __construct(){}
 
 	public static function hdd() {
 

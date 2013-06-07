@@ -1,8 +1,10 @@
 <?php
 
-namespace lib;
+//namespace lib;
 
 class Uptime {
+
+	public function __construct(){}
 
 	public static function uptime() {
 
