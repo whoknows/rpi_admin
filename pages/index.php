@@ -15,18 +15,18 @@ $users = Users::connected();
 	<div class="page-head">
 		<h2 class="pull-left">Dashboard
 			<span class="page-meta">Main page</span>
-        </h2>
+		</h2>
 
-        <div class="bread-crumb pull-right">
+		<div class="bread-crumb pull-right">
 			<a href="index.html"><i class="icon-home"></i> Home</a>
 			<span class="divider">/</span>
 			<a href="#" class="bread-current">Dashboard</a>
-        </div>
-        <div class="clearfix"></div>
+		</div>
+		<div class="clearfix"></div>
 	</div>
 
 	<div class="matter">
-        <div class="container-fluid">
+		<div class="container-fluid">
 			<div class="row-fluid">
 				<div class="span12">
 					<ul class="today-datas">
@@ -78,58 +78,58 @@ $users = Users::connected();
 					</div>
 				</div>
 
-                <div class="span4">
-                    <div class="widget wblue">
-                        <div class="widget-head">
-                            <div class="pull-left">Server Informations</div>
-                            <div class="widget-icons pull-right">
-                                <a href="#" class="wminimize"><i class="icon-chevron-up"></i></a>
-                                <a href="#" class="wclose"><i class="icon-remove"></i></a>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="widget-content">
-                            <table class="table  table-bordered ">
-                                <tr>
-                                    <td>Hostname</td>
-                                    <td><?php echo Rbpi::hostname(); ?></td>
-                                </tr>
-                                <tr>
-                                    <td>IP Adress</td>
-                                    <td><?php echo Rbpi::ip(); ?></td>
-                                </tr>
-                                <tr>
-                                    <td>Uptime</td>
-                                    <td><?php echo $uptime; ?></td>
-                                </tr>
-                                <tr>
-                                    <td>CPU Freq.</td>
-                                    <td><span class="text-info"><?php echo $cpu['current']; ?></span> (min: <?php echo $cpu['min']; ?>  &middot;  max: <?php echo $cpu['max']; ?>)</td>
-                                </tr>
-                                <tr>
-                                    <td>Governor</td>
-                                    <td><?php echo $cpu['governor']; ?></td>
-                                </tr>
-                                <tr>
-                                    <td>Firmware</td>
-                                    <td><?php echo Rbpi::firmware(); ?></td>
-                                </tr>
-                                <tr>
-                                    <td>Kernel</td>
-                                    <td><?php echo Rbpi::kernel(); ?></td>
-                                </tr>
-                                <tr>
-                                    <td>Distribution</td>
-                                    <td><?php echo Rbpi::distribution(); ?></td>
-                                </tr>
-                                <tr>
-                                    <td>Web Server</td>
-                                    <td><?php echo Rbpi::webServer(); ?></td>
-                                </tr>
-                            </table>
-                        </div>
+				<div class="span4">
+					<div class="widget wblue">
+						<div class="widget-head">
+							<div class="pull-left">Server Informations</div>
+							<div class="widget-icons pull-right">
+								<a href="#" class="wminimize"><i class="icon-chevron-up"></i></a>
+								<a href="#" class="wclose"><i class="icon-remove"></i></a>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<div class="widget-content">
+							<table class="table  table-bordered ">
+								<tr>
+									<td>Hostname</td>
+									<td><?php echo Rbpi::hostname(); ?></td>
+								</tr>
+								<tr>
+									<td>IP Adress</td>
+									<td><?php echo Rbpi::ip(); ?></td>
+								</tr>
+								<tr>
+									<td>Uptime</td>
+									<td><?php echo $uptime; ?></td>
+								</tr>
+								<tr>
+									<td>CPU Freq.</td>
+									<td><span class="text-info"><?php echo $cpu['current']; ?></span> (min: <?php echo $cpu['min']; ?>  &middot;  max: <?php echo $cpu['max']; ?>)</td>
+								</tr>
+								<tr>
+									<td>Governor</td>
+									<td><?php echo $cpu['governor']; ?></td>
+								</tr>
+								<tr>
+									<td>Firmware</td>
+									<td><?php echo Rbpi::firmware(); ?></td>
+								</tr>
+								<tr>
+									<td>Kernel</td>
+									<td><?php echo Rbpi::kernel(); ?></td>
+								</tr>
+								<tr>
+									<td>Distribution</td>
+									<td><?php echo Rbpi::distribution(); ?></td>
+								</tr>
+								<tr>
+									<td>Web Server</td>
+									<td><?php echo Rbpi::webServer(); ?></td>
+								</tr>
+							</table>
+						</div>
 					</div>
-                </div>
+				</div>
 			</div>
 			<!-- Dashboard graph ends -->
 
@@ -155,17 +155,17 @@ $users = Users::connected();
 									<div class="file-meta">Heat: <span class="text-info"><?php echo $cpu_heat['degrees']; ?>°C</span> - Load: <span class="text-info"><?php echo $cpu['loads']; ?></span> [1 min] &middot; <span class="text-info"><?php echo $cpu['loads5']; ?></span> [5 min] &middot; <span class="text-info"><?php echo $cpu['loads15']; ?></span> [15 min]</div>
 								</li>
 								<li>
-                                    <strong><i class="icon-save orange"></i> RAM Usage</strong>
-                                    <div class="progress progress-striped">
+									<strong><i class="icon-save orange"></i> RAM Usage</strong>
+									<div class="progress progress-striped">
 										<div class="bar bar-<?php echo $ram['alert']; ?>" style="width: <?php echo $ram['percentage']; ?>%;"><?php echo $ram['percentage']; ?>%</div>
-                                    </div>
-                                    <div class="file-meta">free: <span class="text-success"><?php echo $ram['free']; ?>Mb</span>  &middot; used: <span class="text-warning"><?php echo $ram['used']; ?>Mb</span> &middot; total: <?php echo $ram['total']; ?>Mb</div>
+									</div>
+									<div class="file-meta">free: <span class="text-success"><?php echo $ram['free']; ?>Mb</span>  &middot; used: <span class="text-warning"><?php echo $ram['used']; ?>Mb</span> &middot; total: <?php echo $ram['total']; ?>Mb</div>
 								</li>
 								<li>
 									<strong><i class="icon-refresh blue"></i> Swap Usage</strong>
-                                    <div class="progress progress-striped">
-                                        <div class="bar bar-<?php echo $swap['alert']; ?>" style="width: <?php echo $swap['percentage']; ?>%;"><?php echo $swap['percentage']; ?>%</div>
-                                    </div>
+									<div class="progress progress-striped">
+										<div class="bar bar-<?php echo $swap['alert']; ?>" style="width: <?php echo $swap['percentage']; ?>%;"><?php echo $swap['percentage']; ?>%</div>
+									</div>
 									<div class="file-meta">free: <span class="text-success"><?php echo $swap['free']; ?>Mb</span>  &middot; used: <span class="text-warning"><?php echo $swap['used']; ?>Mb</span> &middot; total: <?php echo $swap['total']; ?>Mb</div>
 								</li>
 							</ul>
@@ -176,51 +176,40 @@ $users = Users::connected();
 						</div>
 					</div>
 				</div>
-                <div class="span4">
-                    <div class="widget wred">
-                        <div class="widget-head">
-                            <div class="pull-left">System Health</div>
-                            <div class="widget-icons pull-right">
-                                <a href="#" class="wminimize"><i class="icon-chevron-up"></i></a>
-                                <a href="#" class="wclose"><i class="icon-remove"></i></a>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-
-                        <div class="widget-content">
-                            <ul class="file-upload">
-                                <li>
-                                    <strong><i class="icon-fire red"></i> CPU Temperature</strong>
-                                    <div class="progress progress-striped">
-                                        <div class="bar bar-<?php echo $cpu_heat['alert']; ?>" style="width: <?php echo $cpu_heat['percentage']; ?>%;"><?php echo $cpu_$
-                                    </div>
-                                    <div class="file-meta">Heat: <span class="text-info"><?php echo $cpu_heat['degrees']; ?>°C</span> - Load: <span class="text-info"><$
-                                </li>
-                                <li>
-                                    <strong><i class="icon-save orange"></i> RAM Usage</strong>
-                                    <div class="progress progress-striped">
-                                        <div class="bar bar-<?php echo $ram['alert']; ?>" style="width: <?php echo $ram['percentage']; ?>%;"><?php echo $ram['percentag$
-                                    </div>
-                                    <div class="file-meta">free: <span class="text-success"><?php echo $ram['free']; ?>Mb</span>  &middot; used: <span class="text-warn$
-                                </li>
-                                <li>
-                                    <strong><i class="icon-refresh blue"></i> Swap Usage</strong>
-                                    <div class="progress progress-striped">
-                                        <div class="bar bar-<?php echo $swap['alert']; ?>" style="width: <?php echo $swap['percentage']; ?>%;"><?php echo $swap['percen$
-                                    </div>
-                                    <div class="file-meta">free: <span class="text-success"><?php echo $swap['free']; ?>Mb</span>  &middot; used: <span class="text-war$
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="widget-foot">
-                            <button class="btn pull-right">Refresh All</button>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                </div>
 
 				<div class="span4">
 					<div class="widget wred">
+						<div class="widget-head">
+							<div class="pull-left">System Health</div>
+							<div class="widget-icons pull-right">
+								<a href="#" class="wminimize"><i class="icon-chevron-up"></i></a>
+								<a href="#" class="wclose"><i class="icon-remove"></i></a>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+
+						<div class="widget-content">
+							<ul class="file-upload">
+								for ($i=0; $i<sizeof($hdd); $i++) {
+									echo '<li>
+											<strong><i class="icon-folder-open"></i> ', $hdd[$i]['name'] , '</strong>
+											<div class="progress progress-striped">
+												<div class="bar bar-', $hdd[$i]['alert'], '" style="width: ', $hdd[$i]['percentage'], '%;">', $hdd[$i]['percentage'], '%</div>
+											</div>
+											<div class="file-meta">Free: <span class="text-success">', $hdd[$i]['free'], 'b</span> &middot; used: <span class="text-warning">', $hdd[$i]['used'], 'b</span> &middot; total: ', $hdd[$i]['total'], 'b &middot; format: ', $hdd[$i]['format'], '</div>
+										</li>';
+								}
+							</ul>
+						</div>
+						<div class="widget-foot">
+							<button class="btn pull-right">Refresh All</button>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="span4">
+					<div class="widget wlightblue">
 						<div class="widget-head">
 							<div class="pull-left">Project</div>
 							<div class="widget-icons pull-right">
@@ -275,48 +264,6 @@ $users = Users::connected();
 					</div>
 				</div>
 
-               <div class="span4">
-                    <div class="widget wblue">
-                        <div class="widget-head">
-                            <div class="pull-left">System Informations</div>
-                            <div class="widget-icons pull-right">
-                                <a href="#" class="wminimize"><i class="icon-chevron-up"></i></a>
-                                <a href="#" class="wclose"><i class="icon-remove"></i></a>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-
-                        <div class="widget-content">
-                            <div class="padd">
-                                <ul class="current-status">
-                                    <li>
-                                        <span class="bold">Kernel : </span>
-                                    </li>
-                                    <li>
-                                        <span class="bold">Distribution : </span>
-                                    </li>
-                                    <li>
-                                        <span class="bold">Firmware : </span>
-                                    </li>
-                                    <li>
-                                        <span class="bold">Uptime : <?php echo $uptime; ?></span>
-                                    </li>
-                                    <li>
-                                        <span class="bold">IP Adress (private) : </span>
-                                    </li>
-                                    <li>
-                                        <span class="bold">IP Adress (public) : </span>
-                                    </li>
-                                    <li>
-                                        <span class="bold">Hostname : </span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-			</div>
-
 			<div class="row-fluid">
 				<!--<div class="span6">
 					<div class="widget wblue">
@@ -354,39 +301,39 @@ $users = Users::connected();
 								<div class="form quick-post">
 									<form class="form-horizontal">
 										<div class="control-group">
-                                            <label class="control-label" for="title">Title</label>
-                                            <div class="controls">
+											<label class="control-label" for="title">Title</label>
+											<div class="controls">
 												<input type="text" class="input-large" id="title">
-                                            </div>
+											</div>
 										</div>
 										<div class="control-group">
-                                            <label class="control-label" for="content">Content</label>
-                                            <div class="controls">
+											<label class="control-label" for="content">Content</label>
+											<div class="controls">
 												<textarea class="input-large" id="content"></textarea>
-                                            </div>
+											</div>
 										</div>
 										<div class="control-group">
-                                            <label class="control-label">Category</label>
-                                            <div class="controls">
-                                                <select>
+											<label class="control-label">Category</label>
+											<div class="controls">
+												<select>
 													<option value="">- Choose Cateogry -</option>
 													<option value="1">General</option>
 													<option value="2">News</option>
 													<option value="3">Media</option>
 													<option value="4">Funny</option>
-                                                </select>
-                                            </div>
+												</select>
+											</div>
 										</div>
 										<div class="control-group">
-                                            <label class="control-label" for="tags">Tags</label>
-                                            <div class="controls">
+											<label class="control-label" for="tags">Tags</label>
+											<div class="controls">
 												<input type="text" class="input-large" id="tags">
-                                            </div>
+											</div>
 										</div>
 										<div class="form-actions">
-                                            <button type="submit" class="btn btn-info">Publish</button>
-                                            <button type="submit" class="btn">Save Draft</button>
-                                            <button type="reset" class="btn">Reset</button>
+											<button type="submit" class="btn btn-info">Publish</button>
+											<button type="submit" class="btn">Save Draft</button>
+											<button type="reset" class="btn">Reset</button>
 										</div>
 									</form>
 								</div>
@@ -396,6 +343,6 @@ $users = Users::connected();
 					</div>
 				</div>
 			</div>
-        </div>
+		</div>
 	</div>
 </div>
