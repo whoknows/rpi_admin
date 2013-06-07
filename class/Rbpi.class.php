@@ -1,8 +1,10 @@
 <?php
 
-namespace lib;
+//namespace lib;
 
 class Rbpi {
+
+	public function __construct() {}
 
 	public static function distribution() {
 		$distroTypeRaw = exec("cat /etc/*-release | grep PRETTY_NAME=", $out);

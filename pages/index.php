@@ -32,27 +32,27 @@ $users = Users::connected();
 					<ul class="today-datas">
 						<li class="bred">
 							<div class="pull-left"><i class="icon-fire"></i></div>
-							<div class="datas-text pull-right"><span class="bold">45.6°C</span> CPU Temp.</div>
+							<div class="datas-text pull-right"><span class="bold"><?php echo $cpu_heat['degrees']; ?>°C</span> CPU Temp.</div>
 							<div class="clearfix"></div>
 						</li>
 						<li class="bgreen">
 							<div class="pull-left"><i class="icon-tasks"></i></div>
-							<div class="datas-text pull-right"><span class="bold">1.21</span> CPU Load</div>
+							<div class="datas-text pull-right"><span class="bold"><?php echo $cpu['loads']; ?></span> CPU Load</div>
 							<div class="clearfix"></div>
 						</li>
 						<li class="blightblue">
 							<div class="pull-left"><i class="icon-bolt"></i></div>
-							<div class="datas-text pull-right"><span class="bold">350Mhz</span> CPU Freq.</div>
+							<div class="datas-text pull-right"><span class="bold"><?php echo $cpu['current']; ?></span> CPU Freq.</div>
 							<div class="clearfix"></div>
 						</li>
 						<li class="bviolet">
 							<div class="pull-left"><i class="icon-save"></i></div>
-							<div class="datas-text pull-right"><span class="bold">282Mb</span> Free RAM</div>
+							<div class="datas-text pull-right"><span class="bold"><?php echo $ram['free']; ?>Mb</span> Free RAM</div>
 							<div class="clearfix"></div>
 						</li>
 						<li class="borange">
 							<div class="pull-left"><i class="icon-hdd"></i></div>
-							<div class="datas-text pull-right"><span class="bold">12.84Gb</span> Free Disk</div>
+							<div class="datas-text pull-right"><span class="bold"><?php echo $hdd[0]['free'];  ?></span> Free Disk</div>
 							<div class="clearfix"></div>
 						</li>
 					</ul>
@@ -72,52 +72,64 @@ $users = Users::connected();
 						</div>
 						<div class="widget-content">
 							<div class="padd">
-								<div style="width:100%; height:280px;" id="graphdiv1"></div>
+								<div style="width:100%; height:302px;" id="graphdiv1"></div>
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<div class="span4">
-					<div class="widget wblue">
-						<div class="widget-head">
-							<div class="pull-left">System Informations</div>
-							<div class="widget-icons pull-right">
-								<a href="#" class="wminimize"><i class="icon-chevron-up"></i></a>
-								<a href="#" class="wclose"><i class="icon-remove"></i></a>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-
-						<div class="widget-content">
-							<div class="padd">
-								<ul class="current-status">
-									<li>
-										<span class="bold">Kernel : </span>
-									</li>
-									<li>
-										<span class="bold">Distribution : </span>
-									</li>
-									<li>
-										<span class="bold">Firmware : </span>
-									</li>
-									<li>
-										<span class="bold">Uptime : </span>
-									</li>
-									<li>
-										<span class="bold">IP Adress (private) : </span>
-									</li>
-									<li>
-										<span class="bold">IP Adress (public) : </span>
-									</li>
-									<li>
-										<span class="bold">Hostname : </span>
-									</li>
-								</ul>
-							</div>
-						</div>
+                <div class="span4">
+                    <div class="widget wblue">
+                        <div class="widget-head">
+                            <div class="pull-left">Server Informations</div>
+                            <div class="widget-icons pull-right">
+                                <a href="#" class="wminimize"><i class="icon-chevron-up"></i></a>
+                                <a href="#" class="wclose"><i class="icon-remove"></i></a>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="widget-content">
+                            <table class="table  table-bordered ">
+                                <tr>
+                                    <td>Hostname</td>
+                                    <td><?php echo Rbpi::hostname(); ?></td>
+                                </tr>
+                                <tr>
+                                    <td>IP Adress</td>
+                                    <td><?php echo Rbpi::ip(); ?></td>
+                                </tr>
+                                <tr>
+                                    <td>Uptime</td>
+                                    <td><?php echo $uptime; ?></td>
+                                </tr>
+                                <tr>
+                                    <td>CPU Freq.</td>
+                                    <td><span class="text-info"><?php echo $cpu['current']; ?></span> (min: <?php echo $cpu['min']; ?>  &middot;  max: <?php echo $cpu['max']; ?>)</td>
+                                </tr>
+                                <tr>
+                                    <td>Governor</td>
+                                    <td><?php echo $cpu['governor']; ?></td>
+                                </tr>
+                                <tr>
+                                    <td>Firmware</td>
+                                    <td><?php echo Rbpi::firmware(); ?></td>
+                                </tr>
+                                <tr>
+                                    <td>Kernel</td>
+                                    <td><?php echo Rbpi::kernel(); ?></td>
+                                </tr>
+                                <tr>
+                                    <td>Distribution</td>
+                                    <td><?php echo Rbpi::distribution(); ?></td>
+                                </tr>
+                                <tr>
+                                    <td>Web Server</td>
+                                    <td><?php echo Rbpi::webServer(); ?></td>
+                                </tr>
+                            </table>
+                        </div>
 					</div>
-				</div>
+                </div>
 			</div>
 			<!-- Dashboard graph ends -->
 
@@ -219,46 +231,46 @@ $users = Users::connected();
 					</div>
 				</div>
 
-				<div class="span4">
-					<div class="widget wlightblue">
-						<div class="widget-head">
-							<div class="pull-left">Server Status</div>
-							<div class="widget-icons pull-right">
-								<a href="#" class="wminimize"><i class="icon-chevron-up"></i></a>
-								<a href="#" class="wclose"><i class="icon-remove"></i></a>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-						<div class="widget-content">
-							<table class="table  table-bordered ">
-								<tr>
-									<td>Domain</td>
-									<td>sitedomain.com</td>
-								</tr>
-								<tr>
-									<td>IP Address</td>
-									<td>192.425.2.4</td>
-								</tr>
-								<tr>
-									<td>Disk Space</td>
-									<td>600GB / 60000GB</td>
-								</tr>
-								<tr>
-									<td>Bandwidth</td>
-									<td>1000GB / 2000GB</td>
-								</tr>
-								<tr>
-									<td>PHP Version</td>
-									<td>5.1.1</td>
-								</tr>
-								<tr>
-									<td>MySQL Databases</td>
-									<td>10</td>
-								</tr>
-							</table>
-						</div>
-					</div>
-				</div>
+               <div class="span4">
+                    <div class="widget wblue">
+                        <div class="widget-head">
+                            <div class="pull-left">System Informations</div>
+                            <div class="widget-icons pull-right">
+                                <a href="#" class="wminimize"><i class="icon-chevron-up"></i></a>
+                                <a href="#" class="wclose"><i class="icon-remove"></i></a>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+
+                        <div class="widget-content">
+                            <div class="padd">
+                                <ul class="current-status">
+                                    <li>
+                                        <span class="bold">Kernel : </span>
+                                    </li>
+                                    <li>
+                                        <span class="bold">Distribution : </span>
+                                    </li>
+                                    <li>
+                                        <span class="bold">Firmware : </span>
+                                    </li>
+                                    <li>
+                                        <span class="bold">Uptime : <?php echo $uptime; ?></span>
+                                    </li>
+                                    <li>
+                                        <span class="bold">IP Adress (private) : </span>
+                                    </li>
+                                    <li>
+                                        <span class="bold">IP Adress (public) : </span>
+                                    </li>
+                                    <li>
+                                        <span class="bold">Hostname : </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 			</div>
 
 			<div class="row-fluid">
