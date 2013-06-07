@@ -213,52 +213,23 @@ $users = Users::connected();
 				<div class="span4">
 					<div class="widget wlightblue">
 						<div class="widget-head">
-							<div class="pull-left">Project</div>
+							<div class="pull-left">Users</div>
 							<div class="widget-icons pull-right">
 								<a href="#" class="wminimize"><i class="icon-chevron-up"></i></a>
 								<a href="#" class="wclose"><i class="icon-remove"></i></a>
 							</div>
 							<div class="clearfix"></div>
 						</div>
-
 						<div class="widget-content">
 							<ul class="project">
-								<li>
-									<p>
-										<input value="check1" type="checkbox">
-										Dynamisation du template
-									</p>
-									<p class="p-meta">
-										<span>90% Done</span>
-									</p>
-									<div class="progress progress-striped">
-										<div class="bar bar-danger" style="width: 90%;"></div>
-									</div>
-								</li>
-								<li>
-									<p>
-										<input value="check1" type="checkbox">
-										Création des cron de récupération de données
-									</p>
-									<p class="p-meta">
-										<span>40% Done</span>
-									</p>
-									<div class="progress progress-striped">
-										<div class="bar bar-success" style="width: 40%;"></div>
-									</div>
-								</li>
-								<li>
-									<p>
-										<input value="check1" type="checkbox">
-										Récupération de la taille des fichiers de log
-									</p>
-									<p class="p-meta">
-										<span>0% Done</span>
-									</p>
-									<div class="progress progress-striped">
-										<div class="bar bar-success" style="width: 0%;"></div>
-									</div>
-								</li>
+								 <?php
+									if (sizeof($users) > 0) {
+										for ($i=0; $i<sizeof($users); $i++)
+											echo '<li><i class="icon-user"></i><span class="text-info">', $users[$i]['user'] ,'</span> since ', $users[$i]['date'], ' at ', $users[$i]['hour'], ' from <strong>', $users[$i]['ip'] ,'</strong> ', $users[$i]['dns'], '</li>', "\n";
+									} else {
+										echo '<li>No user logged in</li>';
+									}
+								?>
 							</ul>
 							<div class="clearfix"></div>
 						</div>
