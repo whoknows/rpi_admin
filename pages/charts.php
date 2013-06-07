@@ -39,7 +39,7 @@
 						<div class="widget-content">
 							<div class="padd">
 								<!-- Barchart. jQuery Flot plugin used. -->
-								<div id="graphdiv1"></div>
+								<div style="width:100%; height:300px;" id="graphdiv1"></div>
 								<hr />
 								Temperature and humidity in my house (in real time) !
 							</div>
@@ -60,7 +60,7 @@
 
 						<div class="widget-content">
 							<div class="padd">
-								<div id="graphdiv2"></div>
+								<div style="width:100%; height:300px;" id="graphdiv2"></div>
 							</div>
 						</div>
 					</div>
@@ -81,7 +81,7 @@
 
 						<div class="widget-content">
 							<div class="padd">
-								<div id="live-chart"></div>
+								<div style="width:100%; height:300px;" id="graphdiv3"></div>
 								<hr />
 								Time Inverval: <input id="updateInterval" type="text" class="span3" value="">
 							</div>
