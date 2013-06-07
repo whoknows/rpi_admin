@@ -50,7 +50,7 @@
 					<!-- Curve chart starts -->
 					<div class="widget wgreen">
 						<div class="widget-head">
-							<div class="pull-left">Curve Chart</div>
+							<div class="pull-left">CPU Temperature</div>
 							<div class="widget-icons pull-right">
 								<a href="#" class="wminimize"><i class="icon-chevron-up"></i></a>
 								<a href="#" class="wclose"><i class="icon-remove"></i></a>
