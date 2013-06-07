@@ -5,7 +5,7 @@
         <!-- Page heading -->
 		<h2 class="pull-left">Charts
 			<!-- page meta -->
-			<span class="page-meta">Something Goes Here</span>
+			<span class="page-meta">System and home monitoring</span>
         </h2>
 
         <!-- Breadcrumb -->
@@ -71,7 +71,7 @@
 
 					<div class="widget wred">
 						<div class="widget-head">
-							<div class="pull-left">Real Time Chart</div>
+							<div class="pull-left">Memory Usage</div>
 							<div class="widget-icons pull-right">
 								<a href="#" class="wminimize"><i class="icon-chevron-up"></i></a>
 								<a href="#" class="wclose"><i class="icon-remove"></i></a>
@@ -92,7 +92,7 @@
 					<!-- Pie chart starts -->
 					<div class="widget wviolet">
 						<div class="widget-head">
-							<div class="pull-left">Pie Chart</div>
+							<div class="pull-left">CPU Frequency</div>
 							<div class="widget-icons pull-right">
 								<a href="#" class="wminimize"><i class="icon-chevron-up"></i></a>
 								<a href="#" class="wclose"><i class="icon-remove"></i></a>
