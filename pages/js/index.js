@@ -74,6 +74,7 @@ $(function() {
                             var date = new Date(x.replace(/^(\d{4})(\d\d)(\d\d)(\d\d)(\d\d)(\d\d)$/,'$4:$5:$6 $2/$3/$1'));
                             return date.getTime();
                         },
+						colors:["#43c83c","#0ca5e7","#fa3031"],
 						yAxisLabelWidth:30,
                         axes: {
                             x: {

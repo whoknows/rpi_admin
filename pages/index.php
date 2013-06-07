@@ -1,7 +1,7 @@
 <?php
 $uptime = Uptime::uptime();
 $ram = Memory::ram();
-//$swap = Memory::swap();
+$swap = Memory::swap();
 $cpu = Cpu::cpu();
 $cpu_heat = Cpu::heat();
 $hdd = Storage::hdd();
@@ -137,7 +137,7 @@ $users = Users::connected();
 				<div class="span4">
 					<div class="widget wviolet">
 						<div class="widget-head">
-							<div class="pull-left">File Upload</div>
+							<div class="pull-left">System Health</div>
 							<div class="widget-icons pull-right">
 								<a href="#" class="wminimize"><i class="icon-chevron-up"></i></a>
 								<a href="#" class="wclose"><i class="icon-remove"></i></a>
@@ -148,33 +148,77 @@ $users = Users::connected();
 						<div class="widget-content">
 							<ul class="file-upload">
 								<li>
-									<strong><i class="icon-upload-alt green"></i> File_Name_Here.Mp3</strong>
-									<div class="progress progress-animated progress-striped">
-										<div class="bar bar-success" data-percentage="100"></div>
+									<strong><i class="icon-fire red"></i> CPU Temperature</strong>
+									<div class="progress progress-striped">
+										<div class="bar bar-<?php echo $cpu_heat['alert']; ?>" style="width: <?php echo $cpu_heat['percentage']; ?>%;"><?php echo $cpu_heat['percentage']; ?>%</div>
 									</div>
-									<div class="file-meta">3.3 of 5MB - 5 mins - 1MB/Sec</div>
-									<div class="btn-grou1p">
-										<button class="btn btn-mini btn-success"><i class="icon-play"></i> </button>
-										<button class="btn btn-mini btn-primary"><i class="icon-pause"></i> </button>
-										<button class="btn btn-mini btn-danger pull-right"><i class="icon-remove"></i> </button>
-									</div>
+									<div class="file-meta">Heat: <span class="text-info"><?php echo $cpu_heat['degrees']; ?>°C</span> - Load: <span class="text-info"><?php echo $cpu['loads']; ?></span> [1 min] &middot; <span class="text-info"><?php echo $cpu['loads5']; ?></span> [5 min] &middot; <span class="text-info"><?php echo $cpu['loads15']; ?></span> [15 min]</div>
 								</li>
 								<li>
-									<strong><i class="icon-ok red"></i> Second_File.Mp3</strong>
-									<div class="file-meta">5MB - 5 mins - Completed</div>
+                                    <strong><i class="icon-save orange"></i> RAM Usage</strong>
+                                    <div class="progress progress-striped">
+										<div class="bar bar-<?php echo $ram['alert']; ?>" style="width: <?php echo $ram['percentage']; ?>%;"><?php echo $ram['percentage']; ?>%</div>
+                                    </div>
+                                    <div class="file-meta">free: <span class="text-success"><?php echo $ram['free']; ?>Mb</span>  &middot; used: <span class="text-warning"><?php echo $ram['used']; ?>Mb</span> &middot; total: <?php echo $ram['total']; ?>Mb</div>
 								</li>
 								<li>
-									<strong><i class="icon-ok red"></i> Third_File_Here.Mp3</strong>
-									<div class="file-meta">5MB - 5 mins - Stopped</div>
+									<strong><i class="icon-refresh blue"></i> Swap Usage</strong>
+                                    <div class="progress progress-striped">
+                                        <div class="bar bar-<?php echo $swap['alert']; ?>" style="width: <?php echo $swap['percentage']; ?>%;"><?php echo $swap['percentage']; ?>%</div>
+                                    </div>
+									<div class="file-meta">free: <span class="text-success"><?php echo $swap['free']; ?>Mb</span>  &middot; used: <span class="text-warning"><?php echo $swap['used']; ?>Mb</span> &middot; total: <?php echo $swap['total']; ?>Mb</div>
 								</li>
 							</ul>
 						</div>
 						<div class="widget-foot">
-							<button class="btn pull-right">Clear All</button>
+							<button class="btn pull-right">Refresh All</button>
 							<div class="clearfix"></div>
 						</div>
 					</div>
 				</div>
+                <div class="span4">
+                    <div class="widget wred">
+                        <div class="widget-head">
+                            <div class="pull-left">System Health</div>
+                            <div class="widget-icons pull-right">
+                                <a href="#" class="wminimize"><i class="icon-chevron-up"></i></a>
+                                <a href="#" class="wclose"><i class="icon-remove"></i></a>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+
+                        <div class="widget-content">
+                            <ul class="file-upload">
+                                <li>
+                                    <strong><i class="icon-fire red"></i> CPU Temperature</strong>
+                                    <div class="progress progress-striped">
+                                        <div class="bar bar-<?php echo $cpu_heat['alert']; ?>" style="width: <?php echo $cpu_heat['percentage']; ?>%;"><?php echo $cpu_$
+                                    </div>
+                                    <div class="file-meta">Heat: <span class="text-info"><?php echo $cpu_heat['degrees']; ?>°C</span> - Load: <span class="text-info"><$
+                                </li>
+                                <li>
+                                    <strong><i class="icon-save orange"></i> RAM Usage</strong>
+                                    <div class="progress progress-striped">
+                                        <div class="bar bar-<?php echo $ram['alert']; ?>" style="width: <?php echo $ram['percentage']; ?>%;"><?php echo $ram['percentag$
+                                    </div>
+                                    <div class="file-meta">free: <span class="text-success"><?php echo $ram['free']; ?>Mb</span>  &middot; used: <span class="text-warn$
+                                </li>
+                                <li>
+                                    <strong><i class="icon-refresh blue"></i> Swap Usage</strong>
+                                    <div class="progress progress-striped">
+                                        <div class="bar bar-<?php echo $swap['alert']; ?>" style="width: <?php echo $swap['percentage']; ?>%;"><?php echo $swap['percen$
+                                    </div>
+                                    <div class="file-meta">free: <span class="text-success"><?php echo $swap['free']; ?>Mb</span>  &middot; used: <span class="text-war$
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="widget-foot">
+                            <button class="btn pull-right">Refresh All</button>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+
 				<div class="span4">
 					<div class="widget wred">
 						<div class="widget-head">
