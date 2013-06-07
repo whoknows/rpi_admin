@@ -28,7 +28,7 @@
 					<!-- Bar Chart -->
 					<div class="widget wlightblue">
 						<div class="widget-head">
-							<div class="pull-left">Bar Chart</div>
+							<div class="pull-left">Temperature and Humidity</div>
 							<div class="widget-icons pull-right">
 								<a href="#" class="wminimize"><i class="icon-chevron-up"></i></a>
 								<a href="#" class="wclose"><i class="icon-remove"></i></a>
@@ -39,19 +39,9 @@
 						<div class="widget-content">
 							<div class="padd">
 								<!-- Barchart. jQuery Flot plugin used. -->
-								<div id="bar-chart"></div>
+								<div id="graphdiv1"></div>
 								<hr />
-								<!--Bar chart stuffs -->
-								<div class="btn-group stackControls">
-									<input type="button" value="With stacking" class="btn">
-									<input type="button" value="Without stacking" class="btn">
-								</div>
-
-								<div class="btn-group graphControls">
-									<input type="button" value="Bars" class="btn">
-									<input type="button" value="Lines" class="btn">
-									<input type="button" value="Lines with steps" class="btn">
-								</div>
+								Temperature and humidity in my house (in real time) !
 							</div>
 						</div>
 					</div>
@@ -70,10 +60,7 @@
 
 						<div class="widget-content">
 							<div class="padd">
-								<div id="curve-chart"></div>
-								<hr />
-								<div id="hoverdata">Mouse hovers at
-									(<span id="x">0</span>, <span id="y">0</span>). <span id="clickdata"></span></div>
+								<div id="graphdiv2"></div>
 							</div>
 						</div>
 					</div>
