@@ -159,7 +159,7 @@ if (!$user->isConnected()) {
 			if (isset($_GET['page']) && !empty($_GET['page']) && !is_array($_GET['page'])) {
 				$page = htmlspecialchars($_GET['page']);
 			}
-			echo Tools::addSubView('pages/' . $page . '.html');
+			echo Tools::addSubView('pages/' . $page . '.php');
 			?>
 			<input type="hidden" name="current_page" value="<?php echo $page; ?>" />
 		</div>
