@@ -108,8 +108,8 @@ if (!$user->isConnected()) {
 						<li class="nred"><a href="?page=index"><i class="icon-desktop"></i> Dashboard</a></li>
 						<li class="ngreen"><a href="?page=charts"><i class="icon-bar-chart"></i> Charts</a></li>
 						<li class="nlightblue"><a href="?page=tables"><i class="icon-table"></i> Tables</a></li>
-						<li class="nviolet"><a href="?page=system"><i class="icon-cog"></i> System</a></li>
-						<li class="has_submenu nlightblue">
+						<li class="norange"><a href="?page=system"><i class="icon-cog"></i> System</a></li>
+						<li class="has_submenu nblue">
 							<a href="#">
 								<i class="icon-th"></i> Widgets
 								<span class="pull-right"><i class="icon-angle-right"></i></span>
