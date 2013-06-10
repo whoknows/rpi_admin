@@ -4,7 +4,7 @@
 	<!-- Page heading -->
 	<div class="page-head">
 		<!-- Page heading -->
-		<h2 class="pull-left">System Details
+		<h2 class="pull-left">System Management
 			<!-- page meta -->
 			<span class="page-meta">Scripts and system management</span>
 		</h2>
