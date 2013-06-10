@@ -3,22 +3,22 @@
 
 	<!-- Page heading -->
 	<div class="page-head">
-        <!-- Page heading -->
+		<!-- Page heading -->
 		<h2 class="pull-left">Tables
 			<!-- page meta -->
 			<span class="page-meta">Something Goes Here</span>
-        </h2>
+		</h2>
 
 
-        <!-- Breadcrumb -->
-        <div class="bread-crumb pull-right">
+		<!-- Breadcrumb -->
+		<div class="bread-crumb pull-right">
 			<a href="index.html"><i class="icon-home"></i> Home</a>
 			<!-- Divider -->
 			<span class="divider">/</span>
 			<a href="#" class="bread-current">Tables</a>
-        </div>
+		</div>
 
-        <div class="clearfix"></div>
+		<div class="clearfix"></div>
 
 	</div>
 	<!-- Page heading ends -->
@@ -28,7 +28,7 @@
 	<!-- Matter -->
 
 	<div class="matter">
-        <div class="container-fluid">
+		<div class="container-fluid">
 
 			<div class="row-fluid">
 
@@ -454,7 +454,7 @@
 
 			</div>
 
-        </div>
+		</div>
 	</div>
 
 	<!-- Matter ends -->
