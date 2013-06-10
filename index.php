@@ -119,7 +119,6 @@ if (!$user->isConnected()) {
 								<li><a href="?page=widgets2">Widgets #2</a></li>
 							</ul>
 						</li>
-						<li class="norange"><a href="?page=ui"><i class="icon-sitemap"></i> UI Elements</a></li>
 						<li class="has_submenu nviolet">
 							<a href="#">
 								<i class="icon-file-alt"></i> Pages #1
@@ -130,21 +129,14 @@ if (!$user->isConnected()) {
 								<li><a href="?page=post">Make Post</a></li>
 								<li><a href="?page=error-log">Error Log</a></li>
 								<li><a href="?page=support">Support</a></li>
-							</ul>
-						</li>
-						<li class="has_submenu nblue">
-							<a href="#">
-								<i class="icon-file-alt"></i> Pages #2
-								<span class="pull-right"><i class="icon-angle-right"></i></span>
-							</a>
-							<ul>
 								<li><a href="?page=gallery">Gallery</a></li>
 								<li><a href="?page=invoice">Invoice</a></li>
 								<li><a href="?page=media">Media</a></li>
 								<li><a href="?page=profile">Profile</a></li>
+								<li><a href="?page=forms">Forms</a></li>
+								<li><a href="?page=ui">UI Elements</a></li>
 							</ul>
 						</li>
-						<li class="nred"><a href="?page=forms"><i class="icon-list"></i> Forms</a></li>
 					</ul>
 					<!-- Date -->
 					<div class="sidebar-widget">
