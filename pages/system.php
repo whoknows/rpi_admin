@@ -1,3 +1,37 @@
+<?php
+function shell_to_html_table_result($shellExecOutput) {
+	$shellExecOutput = preg_split('/[\r\n]+/', $shellExecOutput);
+
+	// remove double (or more) spaces for all items
+	foreach ($shellExecOutput as &$item) {
+		$item = preg_replace('/[[:blank:]]+/', ' ', $item);
+		$item = trim($item);
+	}
+
+	// remove empty lines
+	$shellExecOutput = array_filter($shellExecOutput);
+
+	// the first line contains titles
+	$columnCount = preg_match_all('/\s+/', $shellExecOutput[0]);
+	$shellExecOutput[0] = '<tr><th>' . preg_replace('/\s+/', '</th><th>', $shellExecOutput[0], $columnCount) . '</th></tr>';
+	$tableHead = $shellExecOutput[0];
+	unset($shellExecOutput[0]);
+
+	// others lines contains table lines
+	foreach ($shellExecOutput as &$item) {
+		$item = '<tr><td>' . preg_replace('/\s+/', '</td><td>', $item, $columnCount) . '</td></tr>';
+	}
+
+	// return the build table
+	return '<table class=\'table table-striped table-bordered\'>'
+				. '<thead>' . $tableHead . '</thead>'
+				. '<tbody>' . implode($shellExecOutput) . '</tbody>'
+			. '</table>';
+}
+
+$ram = Memory::ram();
+$cpu_heat = Cpu::heat();
+?>
 <!-- Main bar -->
 <div class="mainbar">
 
@@ -138,6 +172,46 @@
 									</td>
 								</tr>
 							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row-fluid">
+				<!-- RAM Eaters -->
+				<div class="span4">
+					<div class="widget wgreen">
+						<!-- Widget title -->
+						<div class="widget-head">
+							<div class="pull-left">Top RAM eaters</div>
+							<div class="widget-icons pull-right">
+								<a href="#" class="wminimize"><i class="icon-chevron-up"></i></a>
+								<a href="#" class="wclose"><i class="icon-remove"></i></a>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+
+						<div class="widget-content referrer">
+							<!-- Widget content -->
+							<?php echo shell_to_html_table_result($ram['detail']); ?>
+						</div>
+					</div>
+				</div>
+
+				<div class="span4">
+					<div class="widget wlightblue">
+						<!-- Widget title -->
+						<div class="widget-head">
+							<div class="pull-left">Top CPU eaters</div>
+							<div class="widget-icons pull-right">
+								<a href="#" class="wminimize"><i class="icon-chevron-up"></i></a>
+								<a href="#" class="wclose"><i class="icon-remove"></i></a>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+
+						<div class="widget-content referrer">
+							<!-- Widget content -->
+							<?php echo shell_to_html_table_result($cpu_heat['detail']); ?>
 						</div>
 					</div>
 				</div>
