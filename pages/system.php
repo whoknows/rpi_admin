@@ -198,7 +198,7 @@ $cpu_heat = Cpu::heat();
 				</div>
 
 				<div class="span4">
-					<div class="widget wlightblue">
+					<div class="widget worange">
 						<!-- Widget title -->
 						<div class="widget-head">
 							<div class="pull-left">Top CPU eaters</div>
