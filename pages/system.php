@@ -81,11 +81,11 @@ $cpu_heat = Cpu::heat();
 							<table class="table  table-bordered ">
 								<tr>
 									<th><center>#</center></th>
-									<th>File name</th>
-									<th>File Size</th>
+									<th><center>File name</center></th>
+									<th><center>File Size</center></th>
 								</tr>
 								<?php
-								$dirname = '../../temp/';
+								$dirname = '../temp/';
 								$dir = opendir($dirname); 
 
 								while($file = readdir($dir)) {
@@ -94,8 +94,8 @@ $cpu_heat = Cpu::heat();
 										echo 
 										'<tr>
 											<th><center><i class="icon-file-alt"></i></center></th>
-											<th>'.$file.'</th>
-											<th>'.round(filesize($file)/1024).'Kb</th>
+											<th><center>'.$file.'</center></th>
+											<th><center>'.round(filesize($dirname.$file)/1024).'Kb</center></th>
 										</tr>';
 									}
 								}
