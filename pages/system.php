@@ -84,16 +84,23 @@ $cpu_heat = Cpu::heat();
 									<th>File name</th>
 									<th>File Size</th>
 								</tr>
-								<tr>
-									<td><img src="img/icons/metro.png" alt="" />
-									<td>temp.log</td>
-									<td>245Kb</td>
-								</tr>
-								<tr>
-									<td><img src="img/icons/metro.png" alt="" />
-									<td>cpu.log</td>
-									<td>178Kb</td>
-								</tr>
+								<?php
+								$dirname = '../../temp/';
+								$dir = opendir($dirname); 
+
+								while($file = readdir($dir)) {
+									if($file != '.' && $file != '..' && !is_dir($dirname.$file))
+									{
+										echo 
+										'<tr>
+											<th><center><i class="icon-file-alt"></i></center></th>
+											<th>'.$file.'</th>
+											<th>'.round(filesize($file)/1024).'Kb</th>
+										</tr>';
+									}
+								}
+								closedir($dir);
+								?>
 							</table>
 
 						</div>
