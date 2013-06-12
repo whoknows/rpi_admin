@@ -75,6 +75,17 @@ $users = Users::connected();
 								<div style="width:100%; height:302px;" id="graphdiv1"></div>
 							</div>
 						</div>
+						<div class="widget-foot">
+							<?php
+								$data = explode(',',shell_exec('tail -n 1 ../temp/temp.log'));
+								$data1 = explode(',',shell_exec('head -n 1 ../temp/temp.log'));
+							?>
+							<span class="label label-primary">First Check : <strong><?php echo date('d-m-Y H:i:s',strtotime($data1[0])); ?></strong></span>
+							<span class="label label-warning">Last Check : <strong><?php echo date('d-m-Y H:i:s',strtotime($data[0])); ?></strong></span>
+                            <span class="label label-info pull-right">Current temperature : <strong><?php echo $data[2] ?></strong></span>
+							<span class="label label-success pull-right" style="margin-right:3px;">Current humidity : <strong><?php echo $data[1] ?></strong></span>
+                            <div class="clearfix"></div>
+                        </div>
 					</div>
 				</div>
 
@@ -95,12 +106,16 @@ $users = Users::connected();
 									<td><?php echo Rbpi::hostname(); ?></td>
 								</tr>
 								<tr>
-									<td>IP Adress</td>
-									<td><?php echo Rbpi::ip(); ?></td>
+									<td>IP Adress (private)</td>
+									<td><span class="text-info"><?php echo Rbpi::ip(); ?></span></td>
 								</tr>
 								<tr>
+                                    <td>IP Adress (public)</td>
+                                    <td><span class="text-info"><?php echo shell_exec('wget http://ipecho.net/plain -O - -q ; echo'); ?></span></td>
+                                </tr>
+								<tr>
 									<td>Uptime</td>
-									<td><?php echo $uptime; ?></td>
+									<td><span class="text-warning"><?php echo $uptime; ?></span></td>
 								</tr>
 								<tr>
 									<td>CPU Freq.</td>

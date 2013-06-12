@@ -108,7 +108,7 @@ $cpu_heat = Cpu::heat();
 				</div>
 
 
-				<!-- Browsers -->
+				<!-- Scripts -->
 				<div class="span4">
 					<div class="widget wlightblue">
 						<!-- Widget title -->
@@ -127,16 +127,16 @@ $cpu_heat = Cpu::heat();
 							<table class="table  table-bordered ">
 								<tr>
 									<th><center>#</center></th>
-									<th>Browsers</th>
-									<th>Visits</th>
+									<th>Script</th>
+									<th>Actions</th>
 								</tr>
 								<tr>
-									<td><img src="img/icons/chrome.png" alt="" />
+									<td><center><i class="icon-bolt"></i></center></td>
 									<td>mopidy.sh</td>
 									<td><button class="btn btn-danger">Exec</button></td>
 								</tr>
 								<tr>
-									<td><img src="img/icons/chrome.png" alt="" />
+									<td><center><i class="icon-bolt"></i></center></td>
 									<td>archiveLog.sh</td>
 									<td><button class="btn btn-danger">Exec</button></td>
 								</tr>
