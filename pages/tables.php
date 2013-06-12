@@ -37,7 +37,7 @@
 					<div class="widget wred">
 
 						<div class="widget-head">
-							<div class="pull-left">Tables</div>
+							<div class="pull-left">Temperature and hmidity</div>
 							<div class="widget-icons pull-right">
 								<a href="#" class="wminimize"><i class="icon-chevron-up"></i></a>
 								<a href="#" class="wclose"><i class="icon-remove"></i></a>
@@ -51,47 +51,29 @@
 								<thead>
 									<tr>
 										<th>#</th>
-										<th>Name</th>
-										<th>Location</th>
-										<th>Age</th>
-										<th>Education</th>
+										<th>Date</th>
+										<th>Temperature</th>
+										<th>Humidity</th>
 									</tr>
 								</thead>
 								<tbody>
+									<?php
+										if (($handle = fopen('../temp/temp.log','r')) !== FALSE) {
+											while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+												echo "<tr>";
+												for ($c=0; $c < $num; $c++) {
+													echo "<td>".implode("</td><td>",$data[$c]) . "</td>";
+												}
+												echo "</tr>"
+											}
+											fclose($handle);
+										}
+									?>
 									<tr>
 										<td>1</td>
 										<td>Ashok</td>
 										<td>India</td>
 										<td>23</td>
-										<td>B.Tech</td>
-									</tr>
-									<tr>
-										<td>2</td>
-										<td>Kumarasamy</td>
-										<td>USA</td>
-										<td>22</td>
-										<td>BE</td>
-									</tr>
-									<tr>
-										<td>3</td>
-										<td>Babura</td>
-										<td>UK</td>
-										<td>43</td>
-										<td>PhD</td>
-									</tr>
-									<tr>
-										<td>4</td>
-										<td>Ravi Kumar</td>
-										<td>China</td>
-										<td>73</td>
-										<td>PUC</td>
-									</tr>
-									<tr>
-										<td>5</td>
-										<td>Santhosh</td>
-										<td>Japan</td>
-										<td>43</td>
-										<td>M.Tech</td>
 									</tr>
 								</tbody>
 							</table>
