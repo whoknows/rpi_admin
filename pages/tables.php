@@ -37,7 +37,7 @@
 					<div class="widget wred">
 
 						<div class="widget-head">
-							<div class="pull-left">Temperature and hmidity</div>
+							<div class="pull-left">Temperature and humidity</div>
 							<div class="widget-icons pull-right">
 								<a href="#" class="wminimize"><i class="icon-chevron-up"></i></a>
 								<a href="#" class="wclose"><i class="icon-remove"></i></a>
@@ -47,34 +47,32 @@
 
 						<div class="widget-content">
 
-							<table class="table  table-bordered ">
+							<table class="table table-bordered table-striped">
 								<thead>
 									<tr>
 										<th>#</th>
 										<th>Date</th>
-										<th>Temperature</th>
 										<th>Humidity</th>
+										<th>Temperature</th>
 									</tr>
 								</thead>
 								<tbody>
 									<?php
 										if (($handle = fopen('../temp/temp.log','r')) !== FALSE) {
+											$i=0;
 											while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
-												echo "<tr>";
-												for ($c=0; $c < $num; $c++) {
-													echo "<td>".implode("</td><td>",$data[$c]) . "</td>";
-												}
-												echo "</tr>"
+												echo "<tr>
+														<td>$i</td>
+														<td>". date('d-m-Y H:i:s', strtotime($data[0])) ."</td>
+														<td>".$data[1]."</td>
+														<td>".$data[2]."</td>
+													</tr>";
+												$i++;
+												if($i == 10) break;
 											}
 											fclose($handle);
 										}
 									?>
-									<tr>
-										<td>1</td>
-										<td>Ashok</td>
-										<td>India</td>
-										<td>23</td>
-									</tr>
 								</tbody>
 							</table>
 
