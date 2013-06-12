@@ -78,13 +78,14 @@ $cpu_heat = Cpu::heat();
 						<div class="widget-content referrer">
 							<!-- Widget content -->
 
-							<table class="table  table-bordered ">
+							<table class="table table-bordered table-striped">
+								<thead>
 								<tr>
-									<th><center>#</center></th>
-									<th><center>File name</center></th>
-									<th><center>File Size</center></th>
-								</tr>
-								<?php
+									<th><center><strong>#</strong></center></th>
+									<th>File name</th>
+									<th>File Size</th>
+								</tr></thead>
+								<tbody><?php
 								$dirname = '../temp/';
 								$dir = opendir($dirname); 
 
@@ -93,14 +94,14 @@ $cpu_heat = Cpu::heat();
 									{
 										echo 
 										'<tr>
-											<th><center><i class="icon-file-alt"></i></center></th>
-											<th><center>'.$file.'</center></th>
-											<th><center>'.round(filesize($dirname.$file)/1024).'Kb</center></th>
+											<td><center><i class="icon-file-alt"></i></center></td>
+											<td>'.$file.'</td>
+											<td><strong class="text-success">'.round(filesize($dirname.$file)/1024).' Kb</strong></td>
 										</tr>';
 									}
 								}
 								closedir($dir);
-								?>
+								?></tbody>
 							</table>
 
 						</div>
@@ -123,24 +124,34 @@ $cpu_heat = Cpu::heat();
 
 						<div class="widget-content referrer">
 							<!-- Widget content -->
+							<table class="table table-bordered table-striped">
+								<thead>
+                                <tr>
+                                    <th><center>#</center></th>
+                                    <th>Script</th>
+                                    <th>Actions</th>
+                                </tr>
+								</thead>
+								<tbody>
+                                <?php
+                                $dirname = '../scripts/';
+                                $dir = opendir($dirname); 
 
-							<table class="table  table-bordered ">
-								<tr>
-									<th><center>#</center></th>
-									<th>Script</th>
-									<th>Actions</th>
-								</tr>
-								<tr>
-									<td><center><i class="icon-bolt"></i></center></td>
-									<td>mopidy.sh</td>
-									<td><button class="btn btn-danger">Exec</button></td>
-								</tr>
-								<tr>
-									<td><center><i class="icon-bolt"></i></center></td>
-									<td>archiveLog.sh</td>
-									<td><button class="btn btn-danger">Exec</button></td>
-								</tr>
-							</table>
+                                while($file = readdir($dir)) {
+                                    if($file != '.' && $file != '..' && !is_dir($dirname.$file))
+                                    {
+                                        echo 
+                                        '<tr>
+                                            <td><center><i class="icon-bolt"></i></center></td>
+                                            <td>'.$file.'</td>
+                                            <td><button class="btn btn-danger">Exec</button></td>
+                                        </tr>';
+                                    }
+                                }
+                                closedir($dir);
+                                ?>
+								</tbody>
+                            </table>
 
 						</div>
 					</div>
@@ -161,7 +172,7 @@ $cpu_heat = Cpu::heat();
 
 						<div class="widget-content referrer">
 							<!-- Widget content -->
-							<table class="table  table-bordered ">
+							<table class="table table-bordered table-striped">
 								<tr>
 									<th><center>#</center></th>
 									<th>Service name</th>
@@ -169,7 +180,7 @@ $cpu_heat = Cpu::heat();
 									<th>Actions</th>
 								</tr>
 								<tr>
-									<td><img src="img/icons/chrome.png" alt="" />
+									<td><center><i class="icon-cog"></i></center></td>
 									<td>Shairport</td>
 									<td>Runnig</td>
 									<td>
