@@ -67,4 +67,31 @@ $(function() {
 		}
 	);
 
+	g2 = new Dygraph(
+        document.getElementById("graphdiv3"),
+        "../temp/cpufreq.log",
+        {
+            xValueParser: function(x) {
+                var date = new Date(x.replace(/^(\d{4})(\d\d)(\d\d)(\d\d)(\d\d)(\d\d)$/,'$4:$5:$6 $2/$3/$1'));
+                return date.getTime();
+            },
+            colors:["#f88529"],
+            axes: {
+                x: {
+                    ticker: Dygraph.dateTicker,
+                    axisLabelFormatter: function(x) {
+                        return dateFormat(new Date(x));
+                    },
+                    valueFormatter: function(x) {
+                        return dateFormat(new Date(x));
+                    }
+                }
+            },
+            labelsDivWidth: 500,
+            rollPeriod: 30,
+            strokeWidth: 2.0,
+            labels: ['Date', 'CPU Frequency (Mhz)']
+        }
+    );
+
 });

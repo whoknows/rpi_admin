@@ -71,6 +71,25 @@
 
 					<div class="widget wred">
 						<div class="widget-head">
+							<div class="pull-left">CPU Frequency</div>
+							<div class="widget-icons pull-right">
+								<a href="#" class="wminimize"><i class="icon-chevron-up"></i></a>
+								<a href="#" class="wclose"><i class="icon-remove"></i></a>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<div class="widget-content">
+                            <div class="padd">
+								<div style="width:100%; height:300px;" id="graphdiv3"></div>
+                            </div>
+                        </div>
+
+					</div>
+					<!-- Realtime chart ends -->
+
+					<!-- Pie chart starts -->
+					<div class="widget wviolet">
+						<div class="widget-head">
 							<div class="pull-left">Memory Usage</div>
 							<div class="widget-icons pull-right">
 								<a href="#" class="wminimize"><i class="icon-chevron-up"></i></a>
@@ -81,40 +100,7 @@
 
 						<div class="widget-content">
 							<div class="padd">
-								<div style="width:100%; height:300px;" id="graphdiv3"></div>
-								<hr />
-								Time Inverval: <input id="updateInterval" type="text" class="span3" value="">
-							</div>
-						</div>
-					</div>
-					<!-- Realtime chart ends -->
-
-					<!-- Pie chart starts -->
-					<div class="widget wviolet">
-						<div class="widget-head">
-							<div class="pull-left">CPU Frequency</div>
-							<div class="widget-icons pull-right">
-								<a href="#" class="wminimize"><i class="icon-chevron-up"></i></a>
-								<a href="#" class="wclose"><i class="icon-remove"></i></a>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-
-						<div class="widget-content">
-							<div class="padd">
-
-								<div class="row-fluid">
-									<div class="span4">
-										<div id="pie-chart"></div>
-									</div>
-									<div class="span4">
-										<div id="pie-chart2"></div>
-									</div>
-									<div class="span4">
-										<div id="pie-chart3"></div>
-									</div>
-								</div>
-
+								<div style="width:100%; height:300px;" id="graphdiv4"></div>
 							</div>
 						</div>
 					</div>

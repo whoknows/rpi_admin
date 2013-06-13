@@ -45,7 +45,7 @@
 							<div class="clearfix"></div>
 						</div>
 
-						<div class="widget-content">
+						<div class="widget-content" style="max-height:400px; overflow:auto;">
 
 							<table class="table table-bordered table-striped">
 								<thead>
@@ -68,7 +68,7 @@
 														<td>".$data[2]."</td>
 													</tr>";
 												$i++;
-												if($i == 10) break;
+												//if($i == 10) break;
 											}
 											fclose($handle);
 										}
