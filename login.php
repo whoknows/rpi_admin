@@ -80,5 +80,10 @@
 		<!-- JS -->
 		<script src="js/jquery.js"></script>
 		<script src="js/bootstrap.js"></script>
+		<script>
+			$(document).ready(function(){
+				$('#inputEmail').focus();
+			});
+		</script>
     </body>
 </html>
