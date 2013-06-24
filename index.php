@@ -21,7 +21,7 @@ if (!$user->isConnected()) {
 		<link rel="stylesheet" href="style/jquery-ui.css">
 		<link rel="stylesheet" href="style/fullcalendar.css">
 		<link rel="stylesheet" href="style/prettyPhoto.css">
-		<link rel="stylesheet" href="style/rateit.css">
+		<!--<link rel="stylesheet" href="style/rateit.css">-->
 		<link rel="stylesheet" href="style/bootstrap-datetimepicker.min.css">
 		<link rel="stylesheet" href="style/jquery.gritter.css">
 		<link rel="stylesheet" href="style/jquery.cleditor.css">
@@ -164,7 +164,7 @@ if (!$user->isConnected()) {
 		<script src="js/bootstrap.js"></script> <!-- Bootstrap -->
 		<script src="js/jquery-ui-1.10.2.custom.min.js"></script> <!-- jQuery UI -->
 		<script src="js/fullcalendar.min.js"></script> <!-- Full Google Calendar - Calendar -->
-		<script src="js/jquery.rateit.min.js"></script> <!-- RateIt - Star rating -->
+		<!--<script src="js/jquery.rateit.min.js"></script>--> <!-- RateIt - Star rating -->
 		<script src="js/jquery.prettyPhoto.js"></script> <!-- prettyPhoto -->
 
 		<script src="js/excanvas.min.js"></script>
