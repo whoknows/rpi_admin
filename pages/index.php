@@ -226,7 +226,7 @@ $users = Users::connected();
 				</div>
 
 				<div class="span4">
-					<div class="widget wlightblue">
+					<div class="widget worange">
 						<div class="widget-head">
 							<div class="pull-left">Users</div>
 							<div class="widget-icons pull-right">
