@@ -55,7 +55,7 @@ $users = Users::connected();
 							<div class="datas-text pull-right"><span class="bold"><?php echo $hdd[0]['free'];  ?></span> Free Disk</div>
 							<div class="clearfix"></div>
 						</li>
-						<li class="bred">
+						<li class="bblue">
                             <div class="pull-left"><i class="icon-exclamation-sign"></i></div>
                             <div class="datas-text pull-right"><span class="bold"><?php echo Rbpi::authenticationFailure();  ?></span> Auth. Failure</div>
                             <div class="clearfix"></div>
@@ -95,7 +95,7 @@ $users = Users::connected();
 				</div>
 
 				<div class="span4">
-					<div class="widget wblue">
+					<div class="widget wgreen">
 						<div class="widget-head">
 							<div class="pull-left">Server Informations</div>
 							<div class="widget-icons pull-right">
