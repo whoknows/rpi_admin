@@ -34,6 +34,10 @@ class Rbpi {
 		return$_SERVER['SERVER_SOFTWARE'];
 	}
 
+	public static function authenticationFailure(){
+		return exec('cat /var/log/auth.log* | grep -c "authentication failure"');
+	}
+
 }
 
 ?>
