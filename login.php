@@ -30,7 +30,7 @@
 				<div class="row-fluid">
 					<div class="span12">
 						<!-- Widget starts -->
-						<div class="widget worange">
+						<div class="widget wgreen">
 							<!-- Widget head -->
 							<div class="widget-head">
 								<i class="icon-lock"></i> Login

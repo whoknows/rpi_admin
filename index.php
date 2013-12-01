@@ -109,6 +109,7 @@ if (!$user->isConnected()) {
 						<li class="ngreen"><a href="?page=charts"><i class="icon-bar-chart"></i> Charts</a></li>
 						<li class="nlightblue"><a href="?page=tables"><i class="icon-table"></i> Tables</a></li>
 						<li class="norange"><a href="?page=system"><i class="icon-cog"></i> System</a></li>
+						<li class="nviolet"><a target="_blank" href="http://192.168.1.21:8888"><i class="icon-music"></i> Music</a></li>
 						<li class="has_submenu nblue">
 							<a href="#">
 								<i class="icon-th"></i> Widgets
