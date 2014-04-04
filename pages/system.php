@@ -133,8 +133,13 @@ $cpu_heat = Cpu::heat();
                                 </tr>
 								</thead>
 								<tbody>
+									<tr>
+										<td></td>
+										<td></td>
+                                        <td></td>
+									</tr>
                                 <?php
-                                $dirname = '../scripts/';
+/*                                $dirname = '../scripts/';
                                 $dir = opendir($dirname); 
 
                                 while($file = readdir($dir)) {
@@ -148,7 +153,7 @@ $cpu_heat = Cpu::heat();
                                         </tr>';
                                     }
                                 }
-                                closedir($dir);
+                                closedir($dir);*/
                                 ?>
 								</tbody>
                             </table>
@@ -189,6 +194,26 @@ $cpu_heat = Cpu::heat();
 										<button class="btn btn-info">Restart</button>
 									</td>
 								</tr>
+								<tr>
+                                    <td><center><i class="icon-cog"></i></center></td>
+                                    <td>XBMC</td>
+                                    <td>Runnig</td>
+                                    <td>
+                                        <button class="btn btn-success">Start</button>
+                                        <button class="btn btn-danger">Stop</button>
+                                        <button class="btn btn-info">Restart</button>
+                                    </td>
+                                </tr>
+								<tr>
+                                    <td><center><i class="icon-cog"></i></center></td>
+                                    <td>Mopidy</td>
+                                    <td>Runnig</td>
+                                    <td>
+                                        <button class="btn btn-success">Start</button>
+                                        <button class="btn btn-danger">Stop</button>
+                                        <button class="btn btn-info">Restart</button>
+                                    </td>
+                                </tr>
 							</table>
 						</div>
 					</div>
