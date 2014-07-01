@@ -61,6 +61,7 @@
 										if (($handle = fopen('../temp/temp.log','r')) !== FALSE) {
 											$i=0;
 											while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+												if(!isset($data[1]) || !isset($data[2])) continue;
 												echo "<tr>
 														<td>$i</td>
 														<td>". date('d-m-Y H:i:s', strtotime($data[0])) ."</td>

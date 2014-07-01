@@ -58,12 +58,13 @@ $(function() {
 		return ((num + "").length < 2 ? "0" : "") + num;
 	}
 
-	function dateFormat(indate) {
+	function dateFormat(indate, full) {
 		var hh = addZero(indate.getHours());
 		var MM = addZero(indate.getMinutes());
-		//var dd = addZero(indate.getDate());
-		//var mm = addZero(indate.getMonth() + 1);
-		return hh + ':' + MM;
+		var dd = addZero(indate.getDate());
+		var mm = addZero(indate.getMonth() + 1);
+
+		return dd + '/' + mm + (full ? ' ' +  hh + ':' + MM : '');
 	}
 
 	g1 = new Dygraph(
@@ -80,10 +81,10 @@ $(function() {
 				x: {
 					ticker: Dygraph.dateTicker,
 					axisLabelFormatter: function(x) {
-						return dateFormat(new Date(x));
+						return dateFormat(new Date(x), false);
 					},
 					valueFormatter: function(x) {
-						return dateFormat(new Date(x));
+						return dateFormat(new Date(x), true);
 					}
 				}
 			},

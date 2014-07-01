@@ -87,24 +87,6 @@
 					</div>
 					<!-- Realtime chart ends -->
 
-					<!-- Pie chart starts -->
-					<div class="widget wviolet">
-						<div class="widget-head">
-							<div class="pull-left">Memory Usage</div>
-							<div class="widget-icons pull-right">
-								<a href="#" class="wminimize"><i class="icon-chevron-up"></i></a>
-								<a href="#" class="wclose"><i class="icon-remove"></i></a>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-
-						<div class="widget-content">
-							<div class="padd">
-								<div style="width:100%; height:300px;" id="graphdiv4"></div>
-							</div>
-						</div>
-					</div>
-					<!-- Pie chart ends -->
 				</div>
 			</div>
         </div>

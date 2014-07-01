@@ -1,9 +1,12 @@
 <?php
 include "conf/init.php";
-$user = new User();
+/*$user = new User();
 if (!$user->isConnected()) {
 	header('Location:login.php');
-}
+}*/
+$user = new User();
+$user->setAttribute('login','guillaume');
+$user->setConnected(true);
 ?>
 <!DOCTYPE html>
 <html lang="en">
