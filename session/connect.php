@@ -22,7 +22,7 @@ if (isset($_POST['user-login']) && isset($_POST['user-passwd'])) {
 			}
 		}
 	}*/
-	if($_POST['user-login'] === 'guillaume' && $_POST['user-passwd'] === 'secret'){
+	if($_POST['user-login'] === 'guillaume' && $_POST['user-passwd'] === 'cj6limek30awl'){
 		$user = new User();
 		$user->setAttribute('login',$_POST['user-login']);
 		$user->setConnected(true);

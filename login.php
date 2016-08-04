@@ -56,10 +56,10 @@
 										<!-- Remember me checkbox and sign in button -->
 										<div class="control-group">
 											<div class="controls">
-												<label class="checkbox">
+												<!--<label class="checkbox">
 													<input type="checkbox"> Remember me
 												</label>
-												<br>
+												<br>-->
 												<button type="submit" class="btn btn-danger">Sign in</button>
 												<button type="reset" class="btn">Reset</button>
 											</div>
@@ -68,9 +68,9 @@
 
 								</div>
 							</div>
-							<div class="widget-foot">
+							<!--<div class="widget-foot">
 								Not Registred? <a href="#">Register here</a>
-							</div>
+							</div>-->
 						</div>
 					</div>
 				</div>

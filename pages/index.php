@@ -85,10 +85,10 @@ $users = Users::connected();
 								$data = explode(',',shell_exec('tail -n 1 ../temp/temp.log'));
 								$data1 = explode(',',shell_exec('head -n 1 ../temp/temp.log'));
 							?>
-							<span class="label label-primary">First Check : <strong><?php echo date('d-m-Y H:i:s',strtotime($data1[0])); ?></strong></span>
-							<span class="label label-warning">Last Check : <strong><?php echo date('d-m-Y H:i:s',strtotime($data[0])); ?></strong></span>
-                            <span class="label label-info pull-right">Current temperature : <strong><?php echo $data[2] ?></strong></span>
-							<span class="label label-success pull-right" style="margin-right:3px;">Current humidity : <strong><?php echo $data[1] ?></strong></span>
+							<span class="label label-primary">First Check : <strong><?php echo isset($data1[0]) ? date('d-m-Y H:i:s',strtotime($data1[0])) : 'N/A'; ?></strong></span>
+							<span class="label label-warning">Last Check : <strong><?php echo isset($data[0]) ? date('d-m-Y H:i:s',strtotime($data[0])) : 'N/A'; ?></strong></span>
+                            <span class="label label-info pull-right">Current temperature : <strong><?php echo isset($data[2]) ? $data[2] : 'N/A'; ?></strong></span>
+							<span class="label label-success pull-right" style="margin-right:3px;">Current humidity : <strong><?php echo isset($data[1]) ? $data[1] : 'N/A'; ?></strong></span>
                             <div class="clearfix"></div>
                         </div>
 					</div>

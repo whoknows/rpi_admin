@@ -109,21 +109,21 @@ $cpu_heat = Cpu::heat();
                                 <tr>
                                     <td><center><i class="icon-cog"></i></center></td>
 	                                <td>Shairport</td>
-	                                <td>Runnig</td>
+	                                <td>Stopped</td>
 	                                <td>
-	                                    <button class="btn btn-success">Start</button>
-	                                    <button class="btn btn-danger">Stop</button>
-	                                    <button class="btn btn-info">Restart</button>
+	                                    <button class="btn btn-success" disabled="disabled">Start</button>
+	                                    <button class="btn btn-danger" disabled="disabled">Stop</button>
+	                                    <button class="btn btn-info" disabled="disabled">Restart</button>
 	                                </td>
                                 </tr>
                                 <tr>
                                     <td><center><i class="icon-cog"></i></center></td>
 	                                <td>XBMC</td>
-	                                <td>Runnig</td>
+	                                <td>Stopped</td>
 	                                <td>
-	                                    <button class="btn btn-success">Start</button>
-	                                    <button class="btn btn-danger">Stop</button>
-	                                    <button class="btn btn-info">Restart</button>
+	                                    <button class="btn btn-success" disabled="disabled">Start</button>
+	                                    <button class="btn btn-danger" disabled="disabled">Stop</button>
+	                                    <button class="btn btn-info" disabled="disabled">Restart</button>
 	                                </td>
                                 </tr>
                                 <tr>
@@ -131,9 +131,9 @@ $cpu_heat = Cpu::heat();
 	                                <td>Mopidy</td>
 	                                <td>Runnig</td>
 	                                <td>
-	                                    <button class="btn btn-success">Start</button>
-	                                    <button class="btn btn-danger">Stop</button>
-	                                    <button class="btn btn-info">Restart</button>
+	                                    <button class="btn btn-success" disabled="disabled">Start</button>
+	                                    <button class="btn btn-danger" disabled="disabled">Stop</button>
+	                                    <button class="btn btn-info" disabled="disabled">Restart</button>
 	                                </td>
                                 </tr>
                             </table>

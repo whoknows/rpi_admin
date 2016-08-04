@@ -31,11 +31,16 @@ class Rbpi {
 	}
 
 	public static function webServer() {
-		return$_SERVER['SERVER_SOFTWARE'];
+		return $_SERVER['SERVER_SOFTWARE'];
 	}
 
 	public static function authenticationFailure(){
-		return exec('cat /var/log/auth.log* | grep -c "authentication failure"');
+        $return = [];
+        exec('cat /var/log/auth.log | grep -c "authentication failure"', $return);
+        if(count($return)) {
+            return $return[count($return) - 1];
+        }
+        return 0;
 	}
 
 }
